@@ -1,0 +1,36 @@
+import java.util.*;
+class Rev 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the String: ");
+		String str=sc.nextLine();
+		String res=solve(str);
+		System.out.println(res);
+	}
+	public static String solve(String s){
+		String a[] =s.split(" ");
+		int i=0,l=a.length-1,n=0;
+		while(n<a.length){
+		       if(n%2==0){
+				char c[]=a[n].toCharArray();
+				int j=0,k=c.length-1;
+				while(j<k){
+					char t=c[j];
+					c[j]=c[k];
+					c[k]=t;
+					j++;
+					k--;
+				}
+				a[n]=new String(c);
+			}n++;	}
+		while(i<l){
+			String temp=a[i];
+			a[i]=a[l];
+			a[l]=temp;i++;l--;
+		}
+		
+		return String.join(" ",a);
+	}
+}

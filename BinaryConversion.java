@@ -1,0 +1,21 @@
+import java.util.*;
+public class BinaryConversion
+{
+	public static void main(String args[]){
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter the number:");
+		int n=sc.nextInt();
+		String bin=convert(n);
+		System.out.println(bin);
+		
+		}
+		public static String convert(int n){
+			String s=" ";
+			while(n!=0){
+				int temp=n%2;
+				s=temp+s;
+				n=n/2;
+			}
+			return s;
+		}
+}

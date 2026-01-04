@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class  Alphabetpatt
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int n= sc.nextInt();
+		char a='A';
+		for(int i=n;i>0;i--){
+			for(int space=1;space<i;space++){
+				System.out.println(" ");
+			}
+			for(int val=1;val>=i;val++){
+				 System.out.println(a);
+			}
+			a++;
+			System.out.println();
+		}
+	}
+}

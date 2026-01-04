@@ -1,0 +1,45 @@
+import java.util.Scanner;
+class Week 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the skill:");
+		 String n=sc.nextLine();
+		switch (n)
+		{
+		case "java","JAVA":
+			System.out.println("enter the topic:");
+			String top=sc.nextLine();
+		    switch(top){
+				case "Token","token":
+					System.out.println("the topic is Token");
+				break;
+				case "Control flow statement","control flow statement":
+					System.out.println("the topic is Control flow statement");
+				break;
+				default:
+					System.out.println("enter valid topic");
+				break;
+			}
+			break;
+		case "sql","SQL":
+			System.out.println("enter the topic:");
+			String topic=sc.nextLine();
+		    switch(topic){
+				case "DDL","ddl":
+					System.out.println("the topic is DDL");
+				break;
+				case "DML","dml":
+					System.out.println("the topic is DML");
+				break;
+				default:
+					System.out.println("enter valid topic");
+				break;}
+			break;
+		default:
+			System.out.println("enter valid Sill");
+		break;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class  SimpleInterest
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int p=sc.nextInt();
+		System.out.println("enter the principle");
+		int n=sc.nextInt();
+		System.out.println("enter the no of year");
+		int r=sc.nextInt();
+		System.out.println("enter the rate");
+		int res=simpleInterest(p,n,r);
+		System.out.println(res);
+	}
+	public static int simpleInterest(int p,int n,int r){
+		int res=(p*n*r)/100;
+		return res;
+	}
+}

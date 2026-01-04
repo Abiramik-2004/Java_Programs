@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class  Loop
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number:");
+		int n=sc.nextInt();
+		int count=0;
+		while(n>0){
+			int q=n%10;
+			n=n/10;
+			count=count+q;
+	}
+	System.out.println(count++);
+}
+}

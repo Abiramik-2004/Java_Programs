@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class LogOp 
+{
+	static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) throws Exception
+	{
+		System.out.print("enter percentage:");
+		double p=sc.nextDouble();
+		String res=(p>100||p<0)?"inavalid":(p>=80)?"A":((p>=60)?"B":(p>=35)?"c":"fail");
+		Thread.sleep(1000);
+		System.out.println("your grade is "+res);
+	}
+}

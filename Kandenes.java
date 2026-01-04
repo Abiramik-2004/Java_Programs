@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class Kandenes 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the n value:");
+		int n=sc.nextInt();
+		int i;
+		int a[]=new int[n];
+		for(i=0;i<n;i++){
+			int a[i]=sc.nextInt();
+	}
+	int maxSum;
+	int count=0;
+	int currentsum[];
+}

@@ -1,0 +1,23 @@
+class Sunrise 
+{
+	public static void small(int[] a){
+
+		for(int i=0;i<a.length;i++){
+			int count =0;
+			for(int j=i+1;j<a.length;j++){
+			if(a[j]<a[i])
+			{
+				count++;
+			}
+			
+		}
+		System.out.println("the smallest count of "+a[i]+" is "+count);
+		}
+		
+	}
+	public static void main(String[] args)
+	{
+		int[] a={5,2,6,1};
+		small(a);
+	}
+}

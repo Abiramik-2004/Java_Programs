@@ -1,0 +1,30 @@
+class FindLargeSmall 
+{
+	public static int largest(int[] a){
+		int large=Integer.MIN_VALUE;
+		for(int i=0;i<a.length;i++){
+			if(a[i]>large){
+				large=a[i];
+			}
+		}
+		return large;
+	}
+	public static int smallest(int[] a){
+		int small=Integer.MAX_VALUE;
+		for(int i=0;i<a.length;i++){
+			if(a[i]<small){
+				small=a[i];
+			}
+		}
+		return small;
+	}
+	
+	public static void main(String[] args) 
+	{
+		int[] a ={8,3,41,-23,72,3,4};
+		int lar=largest(a);
+		System.out.println("The largest number of this array is: "+lar);
+		int sml=smallest(a);
+		System.out.println("the smallest number of this following is:"+sml);
+	}
+}

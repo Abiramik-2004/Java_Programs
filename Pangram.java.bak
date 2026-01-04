@@ -1,0 +1,28 @@
+import java.util.*;
+public class Pangram 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.print("Enter the String to check it is Pangram or not: ");
+		String str=sc.nextLine();
+		isPangram(str);
+	}
+	public static void isPangram(String str){
+		str=str.toLowercase();
+		String temp="";
+		int count =0;
+		for(int i=0;i<str.length();i++){
+			if(temp.indexOf(str.charAt(i))==-1){
+				temp+=str.charAt(i);
+				count++;
+			}
+		}
+		if(count==26){
+			System.out.println("it is Pangram");
+		}
+		else{
+			System.out.println("it is not pangram");
+		}
+	}
+}

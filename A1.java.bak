@@ -1,0 +1,28 @@
+class A {
+    int x;
+    int y;
+
+    // Non-static initializer block (multi-line)
+    {
+        System.out.println("Instance initializer running...");
+        x = 10;   // line 1
+        y = 20;   // line 2
+        System.out.println("x initialized to " + x);
+        System.out.println("y initialized to " + y);
+    }
+
+    // Constructor
+    public A() {
+        System.out.println("Constructor running...");
+    }
+}
+
+public class A1 {
+    public static void main(String[] args) {
+        System.out.println("Creating first object...");
+        A obj1 = new A();
+
+        System.out.println("\nCreating second object...");
+        A obj2 = new A();
+    }
+}

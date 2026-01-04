@@ -1,0 +1,66 @@
+import java.util.*;
+public class TwoDimPrint
+{
+	public static void main(String args[]){
+		int[][] a={{10,20,30,40},
+			{7,24,44,11},
+			{0,1,1,0},
+			{1,7,2,8},
+			{1,4,5,8}
+		};
+		for(int i=0;i<a.length;i++){
+			a[0]=solve1(a[0]);
+			a[1]=solve2(a[1]);
+			a[2]=solve3(a[2]);
+			for(int j=0;j<a[i].length;j++){
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+			
+	}
+	public static int[] solve1(int[]a){
+		int rot=2;
+		int l=1;
+		while(l<=rot){
+			int temp=a[a.length-1];
+			for(int i=a.length-rot;i>=0;i--){
+				a[i+1]=a[i];
+			}
+			a[0]=temp;
+			l++;
+		}
+		return a;
+	}
+	public static int[] solve2(int[]a){
+		int count=0;
+		for(int i=0;i<a.length;i++){
+			for(int j=2;j<a[i];j++){
+				if(a[i]%j==0){
+					a[i]=Integer.MIN_VALUE;
+					count++;
+				}
+			}
+		}
+		int res[]=new int[a.length-count];
+		int k=0;
+		for(int i=0;i<a.length;i++){
+			if(a[i]!=Integer.MIN_VALUE){
+				res[k++]=a[i];
+			}
+		}
+		return res;
+	}
+	public static int[] solve3(int[] a){
+	    int temp=a[0];
+	    for(int i=0;i<a.length-1;i++){
+	        a[i]=a[i+1];
+	    }
+	    a[a.length-1]=temp;
+	    return a;
+	}
+	
+	
+			
+}
+
