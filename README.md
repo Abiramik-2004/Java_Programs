@@ -32,7 +32,7 @@ To build consistency in programming
 
 Clone the repository:
 
-git clone https://github.com/your-username/java-practice.git
+git clone : https://github.com/your-username/java-practice.git
 Open the project in any IDE (Eclipse / IntelliJ / VS Code)
 
 Compile and run any Java file:
